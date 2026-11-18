@@ -65,7 +65,7 @@ If you use CubeMap, please cite:
 
 ## License
 
-DRAGON is free software distributed under the [GNU General Public License v3.0](LICENSE).
+CubeMap is free software distributed under the [GNU General Public License v3.0](LICENSE).
 
 ## Contact
 Manuel Pérez Escribano ([manuel.perez-escribano@uv.es](mailto:manuel.perez-escribano@uv.es)),

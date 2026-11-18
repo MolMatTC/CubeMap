@@ -1,8 +1,6 @@
 # CubeMap approach
-## Instalation
-You run the CubeMap code at your own risk and you are responsible of checking that the obtained data makes sense.
 
-**Compile the code**
+## Compile the code
 Before compiling, make sure you have installed:
 
 Intel MKL 2025
@@ -16,7 +14,7 @@ Also ensure that the environment variable MKLROOT is correctly defined.
 make
 ```
 
-**Run the code**
+## Run the code
 You need:
  1. A cube file of the molecular orbital of interest (generated with any quantum chemistry software)
  2. The .xyz files of the two molecules of interest to compute the coupling
@@ -27,7 +25,7 @@ It is runned as:
 cubemap --c cubefile --m xyz1 xyz2 
 ````
 
-**Excluding atoms**
+### Excluding atoms
 To exclude atoms from the CubeMap calculation, create an Exclude file containing:
  1. First line: number of atoms to exclude
  2. Second line: index of those atoms
@@ -44,18 +42,34 @@ It is runned as:
 cubemap --c cubefile --m xyz1 xyz2 --ex Exclude
 ````
 
-**Multiple Cubes Files**
+### Multiple Cubes Files
 This code also supports using multiple reference cube files, with optional atom exclusion:
 
 ````bash
 cubemap --mc cubefile1 cubefile2 xyzref1 xyzref2 box --m xyz1 xyz2 [--ex Excludefile]
 ````
 
-**Help**
+## Help
 You can display all available options of cubemap by running:
 
 ````bash
 cubemap --h [--help]
 ````
+## How to cite
+If you use CubeMap, please cite:
 
-Disclaimer: You run the CubeMap code at your own risk and you are responsible of checking that the obtained data makes sense.
+- R. Rubert-Albiol, D. Aranda, E. Ortí, J. Cerdá and J. Aragó, *J. Chem. Phys.* **2025**, *162*, 064105.
+  DOI: [10.1063/5.0252054](https://doi.org/10.1063/5.0252054).
+- M. Pérez-Escribano, P. Armada, R. Rubert-Albiol, E. Ortí, J. Calbo, J. Cerdá and J. Aragó, *J. Chem. Phys.* **2026**, *165*, 174121.
+  DOI: [10.1063/5.0351808](https://doi.org/10.1063/5.0351808)
+
+## License
+
+DRAGON is free software distributed under the [GNU General Public License v3.0](LICENSE).
+
+## Contact
+Manuel Pérez Escribano ([manuel.perez-escribano@uv.es](mailto:manuel.perez-escribano@uv.es)),
+Pau Armada ([pau.armada@uv.es](mailto:pau.armada@uv.es)),
+Jesús Cerdá ([jesus.cerda@uv.es](mailto:jesus.cerda@uv.es)) and
+Juan Aragó ([juan.arago@uv.es](mailto:juan.arago@uv.es)).
+Instituto de Ciencias Moleculares (ICMol), Universitat de València, Spain.
